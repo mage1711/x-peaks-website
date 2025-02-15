@@ -1,0 +1,42 @@
+.leaflet-control-attribution {
+  display: none;
+  visibility: hidden;
+}
+
+.leaflet-touch .leaflet-bar {
+  border: none;
+  background-clip: padding-box;
+}
+
+.leaflet-container {
+  z-index: 1;
+}
+
+.custom-icon {
+  width: 30px !important;
+  height: 30px !important;
+  background-color: #132441;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.custom-icon:hover {
+  background-color: #daf561;
+  color: #132441;
+}
+
+.custom-icon-active {
+  width: 30px !important;
+  height: 30px !important;
+  background-color: #daf561;
+  color: #132441;
+  border-radius: 15px;
+}
+
+.custom-icon-inner {
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 11px;
+  margin-top: 4px;
+  font-family: "Gotham";
+}

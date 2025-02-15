@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media screen and (max-width: 768px) {
+  .mobile-nav-bar {
+    background-color: #132441;
+    color: white;
+    border-radius: 12px;
+    margin-top: 16px;
+    padding-bottom: 16px;
+  }
+}

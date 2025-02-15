@@ -1,0 +1,56 @@
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #6c757d;
+  font-size: 14px;
+  font-weight: 400;
+  border-top: 1px solid #e9ecef;
+}
+
+.footer a {
+  color: #6c757d;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .social {
+  margin-top: 10px;
+}
+
+.footer .social a {
+  margin: 0 10px;
+}
+
+.footer .social a:hover {
+  color: #007bff;
+}
+
+.footer .social i {
+  font-size: 20px;
+}
+
+.footer .social i:hover {
+  color: #007bff;
+}
+
+.footer .social i.fa-facebook {
+  color: #3b5998;
+}
+
+.footer .social i.fa-twitter {
+  color: #00aced;
+}
+
+/* Path: src/components/Footer/Footer.js */

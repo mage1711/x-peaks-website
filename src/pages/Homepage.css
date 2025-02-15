@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/public/images/bg-image-desaturated.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.hero-small {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.contour-line-left {
+  height: 80vh;
+  top: 5vh;
+  position: absolute;
+  left: 0;
+  filter: brightness(10);
+  opacity: 0.2;
+}
+
+.contour-line-right {
+  height: 55vh;
+  top: 45vh;
+  position: absolute;
+  right: 0;
+  filter: brightness(10);
+  opacity: 0.2;
+}
+
+.packages-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/public/images/Packages-Banner.jpeg") !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: -2;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/public/images/About-Us-Banner.jpeg") !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: -2;
+}
+
+.content {
+  position: fixed;
+  text-align: center;
+  color: white;
+  z-index: -1;
+  width: fit-content;
+  margin: auto;
+}
+
+.top-layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 107vh;
+  top: 0;
+  background-image: url("/public/images/bg-front-desaturated.png");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0 !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+p {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.hero-title {
+  font-size: 14vw;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hero-title-small {
+  font-size: 10vw;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 6vh;
+  max-width: 750px;
+  line-height: 1.3;
+}
+
+.subheading {
+  font-size: 1.5em;
+  font-family: "Castoro", serif;
+}
+
+.preloader-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #132441;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0.7s cubic-bezier(0.78, 0.17, 0.25, 0.76) 3s preloader-left;
+  z-index: 11;
+  animation-iteration-count: 1;
+  visibility: visible;
+  animation-fill-mode: forwards;
+}
+
+.preloader-right {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #132441;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0.7s cubic-bezier(0.78, 0.17, 0.25, 0.76) 3s preloader-right;
+  z-index: 11;
+  animation-iteration-count: 1;
+  visibility: visible;
+  animation-fill-mode: forwards;
+}
+
+.preloader-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  z-index: 12;
+  background-image: url("/public/images/logo-small.svg");
+  background-size: contain;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  animation: 0.5s cubic-bezier(0.78, 0.17, 0.25, 0.76) 2.5s preloader-image;
+  animation-iteration-count: 1;
+  visibility: visible;
+  animation-fill-mode: forwards;
+}
+
+.preloader-image-bg {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  background-image: url("/public/images/contour-background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: 1s cubic-bezier(0.78, 0.17, 0.25, 0.76) 2s preloader-image;
+  animation-iteration-count: 1;
+  visibility: visible;
+  animation-fill-mode: forwards;
+  filter: opacity(0.2);
+}
+
+@keyframes preloader-left {
+  0% {
+    transform: none;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(-50vw);
+    visibility: hidden;
+  }
+}
+
+@keyframes preloader-right {
+  0% {
+    transform: none;
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(50vw);
+    visibility: hidden;
+  }
+}
+
+@keyframes preloader-image {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .hero {
+    height: 95vh;
+  }
+
+  .section-heading {
+    font-size: 30px;
+    max-width: 750px;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: 18vw;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+
+  .hero-title-small {
+    font-size: 14vw;
+    font-weight: bold;
+    line-height: 0;
+    margin-bottom: 200px;
+  }
+
+  .hero-small {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contour-line-left {
+    height: 50vh;
+    top: 3vh;
+  }
+
+  .contour-line-right {
+    height: 30vh;
+    top: 55vh;
+  }
+
+  .packages-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/images/Packages-Banner-Low-Res.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: -2;
+  }
+
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/images/About-Us-Banner-Low-Res.jpg") !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -2;
+  }
+
+  .subheading {
+    font-size: 1em;
+  }
+
+  .col-on-mobile {
+    flex-direction: column !important;
+  }
+
+  .copyright {
+    visibility: hidden;
+  }
+}
